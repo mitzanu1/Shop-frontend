@@ -1,0 +1,11 @@
+.card-order {
+  background: rgb(252, 247, 249);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+}
+
+.top {
+  align-self: start;
+}

@@ -1,0 +1,17 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+.products li {
+  flex: 0 1 35rem;
+  margin: 1rem;
+  margin-bottom: 0;
+  height: 42rem;
+  border: 0.2rem #e0e0e0 solid;
+  border-radius: 0.5rem;
+  background-color: rgb(252, 247, 249);
+}

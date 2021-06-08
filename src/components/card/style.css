@@ -1,0 +1,40 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.product-image {
+  background-color: white;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 29rem;
+  margin: 0;
+}
+.product-image img {
+  max-width: 26rem;
+  max-height: 100%;
+  margin: 0;
+}
+
+.product-details {
+  margin: 1rem;
+}
+
+.product-name {
+  line-height: 2.2rem;
+  margin-bottom: 1rem;
+}
+.product-name a {
+  color: rgb(109, 56, 158);
+}
+.product-brand {
+  font-size: 1.2rem;
+  color: #808080;
+  margin-bottom: 0.5rem;
+}
+.product-price {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}

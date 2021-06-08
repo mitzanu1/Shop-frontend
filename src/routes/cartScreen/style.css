@@ -1,0 +1,27 @@
+.cart-prod {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-image {
+  width: 8rem;
+  height: 8rem;
+}
+
+.cart-card {
+  flex-direction: column;
+}
+
+.remove-btn {
+  height: 3rem;
+  padding: 0.3rem;
+}

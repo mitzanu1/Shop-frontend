@@ -1,0 +1,26 @@
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  margin: 1rem 0;
+  display: block;
+}
+
+.form input {
+  border-radius: 0.3rem;
+  border: 1px solid grey;
+  background-color: rgb(246, 236, 253);
+  min-height: 3rem;
+}
+
+.form > button {
+  margin-top: 2rem;
+}

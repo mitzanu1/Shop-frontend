@@ -1,0 +1,56 @@
+.header {
+  grid-area: header;
+  background-color: #203040;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.header a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+.header a:hover {
+  color: #f08040;
+}
+.brand a {
+  font-size: 3rem;
+}
+
+.badge {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  padding: 0.1rem 0.4rem;
+  margin-left: 0.2rem;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:#203040;
+  cursor: pointer;
+}
+
+.dropdown {
+  background-color:#203040;
+  border: 0;
+  outline: 0;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.dropdown:focus .dropdown-content {
+  display: block;
+  
+}
