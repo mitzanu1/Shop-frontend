@@ -30,7 +30,7 @@ const PlaceOrderScreen = (props) => {
 
     const placeOrderHandler = async() => {
       try{
-        const {data} = await axios.post('/api/orders',
+        const {data} = await axios.post('https://glacial-ravine-24086.herokuapp.com/api/orders',
         { 
            orderItems, shippingAddress, paymentMethod, itemsPrice, shippingPrice, taxPrice, totalPrice
         },

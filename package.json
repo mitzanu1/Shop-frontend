@@ -1,6 +1,5 @@
 {
   "name": "new-app",
-  "proxy": "https://glacial-ravine-24086.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

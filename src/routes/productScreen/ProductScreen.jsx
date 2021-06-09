@@ -18,7 +18,7 @@ const ProductScreen = (props) => {
     React.useEffect(()=>{
         const fetchData = async() => {
             try{
-                const {data} = await axios.get(`/api/products/${productId}`)
+                const {data} = await axios.get(`https://glacial-ravine-24086.herokuapp.com/api/products/${productId}`)
                 setProduct(data)
             } catch(err) {
                 setError(err.message)

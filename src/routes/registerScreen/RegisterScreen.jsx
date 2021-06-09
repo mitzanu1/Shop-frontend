@@ -21,7 +21,7 @@ const RegisterScreen = (props) => {
         e.preventDefault()
         if(password === confirmPassword){
             try {
-                const { data } = await axios.post('/api/users/register', {name,email,password})
+                const { data } = await axios.post('https://glacial-ravine-24086.herokuapp.com/api/users/register', {name,email,password})
                 actions.set('userInfo', data)
                 setError(false)
                 props.history.push(redirect)

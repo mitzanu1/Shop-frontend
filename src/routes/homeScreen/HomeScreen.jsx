@@ -15,7 +15,7 @@ const HomeScreen = () => {
     const fetchData = async() => {
       try { 
         setLoading(true)
-        const { data } = await axios.get('/api/products')
+        const { data } = await axios.get('https://glacial-ravine-24086.herokuapp.com/api/products')
         actions.set('data', data)
         setLoading(false)
       } catch (err) {
@@ -26,8 +26,6 @@ const HomeScreen = () => {
     fetchData()
   },[])
   
-  
-
     return (<>
       { loading 
         ? <LoadingBox/> 
