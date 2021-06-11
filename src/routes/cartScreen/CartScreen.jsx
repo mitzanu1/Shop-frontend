@@ -56,9 +56,9 @@ const CartScreen = (props) => {
                         </div>
                         <button 
                             onClick={()=>handleRemove(_id)}
-                            className='remove-btn secondary'
+                            className='remove-btn'
                         >
-                            remove
+                            <i class="fas fa-trash-alt"></i>
                         </button>
                     </div>
                     
