@@ -1,10 +1,10 @@
 import _ from 'lodash'
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 import QtySelector from '../../components/qtySelector/QtySelector'
 import actions from '../../store/actions'
 import './style.css'
+import BackToProdBtn from '../../components/backToProdBtn/BackToProdBtn'
 
 
 const emptyList = []
@@ -37,8 +37,8 @@ const CartScreen = (props) => {
 
     return (
         <div>
-            <Link to='/'>Return to products</Link>
-            <h1>Cart Screen</h1>
+            <BackToProdBtn/>
+            <h1 style={{textAlign:'center'}}>Cart Screen</h1>
             <div className='row row-top'>
             <div className='cart-list col-2'>
             {
@@ -56,7 +56,7 @@ const CartScreen = (props) => {
                         </div>
                         <button 
                             onClick={()=>handleRemove(_id)}
-                            className='remove-btn'
+                            className='remove-btn secondary'
                         >
                             remove
                         </button>

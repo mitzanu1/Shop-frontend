@@ -7,11 +7,8 @@ import axios from 'axios'
 
 const PlaceOrderScreen = (props) => {
 
-    const paymentMethod = useSelector(()=>actions.get('paymentMethod', null))
-    if(!paymentMethod) {
-      props.history.push('/payment')
-    }
-    const itemsPrice = useSelector(()=>actions.get('cartTotal', null))
+    const paymentMethod = useSelector(()=>actions.get('paymentMethod'))
+    const itemsPrice = useSelector(()=>actions.get('cartTotal'))
     const orderItems = useSelector(()=>actions.get('cart', []))
     const userInfo = useSelector(()=>actions.get('userInfo', {}))
     const shippingAddress = useSelector(()=>actions.get('shippingAddress', {}))
@@ -22,6 +19,9 @@ const PlaceOrderScreen = (props) => {
     const [shippingPrice, setShippingPrice] = React.useState(0)
 
     React.useEffect(()=>{
+      if(!paymentMethod) {
+        props.history.push('/payment')
+      }
       const _tax = parseFloat(itemsPrice) * 0.20
       setTaxPrice(_tax)
       const _total = parseFloat(itemsPrice) + _tax
@@ -37,13 +37,14 @@ const PlaceOrderScreen = (props) => {
         { 
           headers: { Authorization: `Bearer ${userInfo.token}` }
         })
-        props.history.push('/orederinfo')
+        actions.set('orderInfo', data)
+        props.history.push('/orderinfo')
         actions.delete('cart')
       }catch(err){
 
       }
     }
-
+    
     return (
         <div>
          <CheckoutWizzard step1 step2 step3 step4 />

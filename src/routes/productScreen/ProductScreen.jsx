@@ -6,6 +6,7 @@ import axios from 'axios'
 import ErrorBox from '../../components/errorBox/ErrorBox'
 import actions from '../../store/actions'
 import _ from 'lodash'
+import BackToProdBtn from '../../components/backToProdBtn/BackToProdBtn'
 
 
 const ProductScreen = (props) => {
@@ -45,7 +46,7 @@ const ProductScreen = (props) => {
     return (
     
         <div>
-        <Link to='/'>Back to results</Link>
+        <BackToProdBtn/>
         <div className='row row-top'>
             <div className='col-2'>
                 <img className='large' src={product.image} alt={product.name}/>

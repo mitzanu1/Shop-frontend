@@ -49,6 +49,7 @@ button {
 
 .main {
   grid-area: main;
+  padding-top: 1rem;
 }
 
 .row {
@@ -75,8 +76,17 @@ button {
 .primary {
   background-color: orange;
 }
+
+.secondary {
+  background-color: rgb(248, 81, 81);
+}
+
 .primary:hover {
   background-color: lightgreen;
+}
+
+.secondary:hover {
+  background-color: rgb(248, 14, 14);
 }
 .block {
   width: 100%;

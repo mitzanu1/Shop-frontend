@@ -4,13 +4,20 @@ import './style.css'
 import actions from '../../store/actions'
 import { useSelector } from 'react-redux'
 
+
+const shippingAddressDefault = {
+    fullName:'',
+    address:'',
+    city:'',
+    postalCode:'',
+    country:''
+}
+
 const ShippingScreen = (props) => {
 
-    const userInfo = useSelector(()=>actions.get('userInfo', null))
-    const shippingAddress = useSelector(()=>actions.get('shippingAddress', {fullName:'',address:'',city:'',postalCode:'',country:''}))
-    if(!userInfo) {
-        props.history.push('/signin')
-    }
+    const userInfo = useSelector(()=>actions.get('userInfo'))
+    const shippingAddress = useSelector(()=>actions.get('shippingAddress', shippingAddressDefault))
+    
 
     const [fullName, setFullName] = React.useState(shippingAddress.fullName)
     const [address, setAddress] = React.useState(shippingAddress.address)
@@ -23,6 +30,12 @@ const ShippingScreen = (props) => {
         actions.set('shippingAddress', {fullName,address,city,postalCode,country})
         props.history.push('/payment')
     }
+
+    React.useEffect(()=>{
+        if(!userInfo) {
+            props.history.push('/signin')
+        }
+    })
 
     return (
         <div>

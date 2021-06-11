@@ -7,9 +7,6 @@ import './style.css'
 const PaymentScreen = (props) => {
 
     const shippingAddress = useSelector(()=>actions.get('shippingAddress', null))
-    if(!shippingAddress) {
-        props.history.push('/shipping')
-    }
 
     const [paymentMethod, setPaymentMethod] = React.useState('PayPal')
 
@@ -18,6 +15,12 @@ const PaymentScreen = (props) => {
         actions.set('paymentMethod', paymentMethod)
         props.history.push('/placeorder')
     }
+
+    React.useEffect(()=>{
+        if(!shippingAddress) {
+            props.history.push('/shipping')
+        }
+    })
 
     return (
         <div>

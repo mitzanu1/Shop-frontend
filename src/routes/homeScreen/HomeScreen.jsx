@@ -8,19 +8,18 @@ import ErrorBox from '../../components/errorBox/ErrorBox'
 
 const HomeScreen = () => {
 
-  const [loading, setLoading] = React.useState(false)
+  const [loading, setLoading] = React.useState(true)
   const [error, setError] = React.useState(false)
   
   React.useEffect(()=>{
     const fetchData = async() => {
       try { 
-        setLoading(true)
         const { data } = await axios.get('https://glacial-ravine-24086.herokuapp.com/api/products')
         actions.set('data', data)
         setLoading(false)
       } catch (err) {
-        setError(err.message)
         setLoading(false)
+        setError(err.message)
       }
     }
     fetchData()
@@ -32,10 +31,10 @@ const HomeScreen = () => {
         : error 
          ? <ErrorBox error={error}/>
          : <div className="content">
-        <ul className="products">
-         <Card/>
-        </ul>
-      </div>
+            <ul className="products">
+             <Card/>
+            </ul>
+           </div>
       }
       </>
     )

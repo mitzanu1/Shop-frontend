@@ -12,7 +12,7 @@ const SigninScreen = (props) => {
     const [password, setPassword] = React.useState('')
     const [email, setEmail ] = React.useState('')
     const [error, setError ] = React.useState(false)
-    const userInfo = useSelector(()=>actions.get('userInfo', null)) 
+    const userInfo = useSelector(()=>actions.get('userInfo')) 
     const redirect = props.location.search
         ? props.location.search.split('=')[1]
         : '/'

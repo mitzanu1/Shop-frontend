@@ -10,6 +10,7 @@ import RegisterScreen from './routes/registerScreen/RegisterScreen';
 import ShippingScreen from './routes/shippingScreen/ShippingScreen';
 import PaymentScreen from './routes/paymentScreen/PaymentScreen';
 import PlaceOrderScreen from './routes/placeOrderScreen/PlaceOrderScreen';
+import OrderInfoScreen from './routes/orderInfoScreen/OrderInfoScreen';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/shipping' component={ShippingScreen}/>
         <Route path='/payment' component={PaymentScreen}/>
         <Route path='/placeorder' component={PlaceOrderScreen}/>
+        <Route path='/orderinfo' component={OrderInfoScreen}/>
         </Switch>
       </main>
       <Footer/>
