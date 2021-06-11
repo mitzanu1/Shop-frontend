@@ -1,5 +1,6 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
+import BackToProdBtn from '../../components/backToProdBtn/BackToProdBtn'
 import actions from '../../store/actions'
 import './style.css'
 
@@ -65,6 +66,7 @@ const OrderInfoScreen = (props) => {
                 </li>
                 <li>Order was placed on: {createdAt}</li>
             </ul>
+            <BackToProdBtn/>
         </div>
     )
 }
