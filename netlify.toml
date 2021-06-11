@@ -1,7 +1,1 @@
-[build]
-  base = "/"
-  publish = "/"
-  command = ""
-
-
-/*    /index.html   200
+\*    /index.html   200
