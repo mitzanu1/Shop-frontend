@@ -1,15 +1,14 @@
 .products {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   list-style: none;
   padding: 0;
-  margin: 0;
-  justify-content: center;
+  margin: 1rem 2rem;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 .products li {
   flex: 0 1 35rem;
-  margin: 1rem;
-  margin-bottom: 0;
+  margin: 0;
   height: 42rem;
   border: 0.2rem #e0e0e0 solid;
   border-radius: 0.5rem;

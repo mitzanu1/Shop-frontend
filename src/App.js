@@ -11,11 +11,17 @@ import ShippingScreen from './routes/shippingScreen/ShippingScreen';
 import PaymentScreen from './routes/paymentScreen/PaymentScreen';
 import PlaceOrderScreen from './routes/placeOrderScreen/PlaceOrderScreen';
 import OrderInfoScreen from './routes/orderInfoScreen/OrderInfoScreen';
+import AdminScreen from './routes/adminScreen/AdminScreen';
+import { useSelector } from 'react-redux';
+import actions from './store/actions';
 
 function App() {
 
+  const userInfo = useSelector(()=>actions.get('userInfo'))
+  const { isAdmin } = userInfo || false
  
   return (
+
       
     <div className="grid-container">
       <Header/>
@@ -30,6 +36,7 @@ function App() {
         <Route path='/payment' component={PaymentScreen}/>
         <Route path='/placeorder' component={PlaceOrderScreen}/>
         <Route path='/orderinfo' component={OrderInfoScreen}/>
+        {isAdmin && <Route path='/admin' component={AdminScreen}/>}
         </Switch>
       </main>
       <Footer/>

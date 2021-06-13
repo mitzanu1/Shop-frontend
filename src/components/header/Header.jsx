@@ -9,6 +9,7 @@ const Header = () => {
 
     const cartProducts = useSelector(()=>actions.get('cart', []))
     const user = useSelector(()=>actions.get('userInfo', {}))
+    const {isAdmin} = user || false
     const brandName = 'E shop'
     
     const handleLogOut = () => {
@@ -25,6 +26,7 @@ const Header = () => {
                 <Link to="/">{brandName}</Link>
             </div>
             <div className="header-links">
+               {isAdmin && <Link to='/admin'>Admin</Link>}
                 <Link to="/cart">
                     Cart
                     {

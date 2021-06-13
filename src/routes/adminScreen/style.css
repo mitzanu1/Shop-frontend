@@ -1,0 +1,56 @@
+.upload-box {
+  margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+.upload-box img {
+  width: 250px;
+  height: 300px;
+}
+
+.admin {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.admin .upload-box label {
+  border: 1px solid grey;
+  padding: 0.5rem 7.8rem;
+  background: orange;
+  color: black;
+  border-radius: 0.7rem;
+}
+
+.input-label {
+  margin-top: 0.5rem;
+}
+
+.admin .form input {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  margin-bottom: 1rem;
+}
+.admin .form {
+  margin-top: 1rem;
+}
+.admin .form button {
+  min-width: 200px;
+}
+.admin .form > div {
+  flex-direction: row;
+}
+
+.admin .form label {
+  width: 150px;
+}
+
+@media screen and (max-width: 724px) {
+  .admin .form > div {
+    flex-direction: column;
+  }
+}
