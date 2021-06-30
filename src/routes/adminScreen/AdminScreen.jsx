@@ -6,7 +6,7 @@ import {useState} from 'react'
 import { useSelector } from 'react-redux'
 import actions from '../../store/actions'
 
-const AdminScreen = () => {
+const AdminScreen = (props) => {
 
     const userInfo = useSelector(()=>actions.get('userInfo'))
     const { token } = userInfo || {}
@@ -55,7 +55,6 @@ const AdminScreen = () => {
 
         imgbbUploader(imgbbOptions)
          .then(async(response) => {
-             console.log(response)
              const { url } = response
              const product = {
                  name: prodName,
@@ -74,6 +73,9 @@ const AdminScreen = () => {
               })
         })
          .catch((error) => console.log(error))
+         .finally(() => {
+             props.history.push('/')
+          })
     }
 
     const onDragOver = (e) => {
