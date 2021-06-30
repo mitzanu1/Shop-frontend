@@ -37,12 +37,12 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color:#203040;
+  background-color: #203040;
   cursor: pointer;
 }
 
 .dropdown {
-  background-color:#203040;
+  background-color: #203040;
   border: 0;
   outline: 0;
   color: white;
@@ -52,5 +52,4 @@
 
 .dropdown:focus .dropdown-content {
   display: block;
-  
 }

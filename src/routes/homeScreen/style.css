@@ -6,7 +6,7 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .products li {
-  flex: 0 1 35rem;
+  flex: 0 1 30rem;
   margin: 0;
   height: 42rem;
   border: 0.2rem #e0e0e0 solid;
